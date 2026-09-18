@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 110" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient for Icon -->
+    <linearGradient id="iconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F46E5" />
+      <stop offset="100%" stop-color="#7C3AED" />
+    </linearGradient>
+
+    <!-- Glowing Accent Gradient -->
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06B6D4" />
+      <stop offset="100%" stop-color="#3B82F6" />
+    </linearGradient>
+
+    <!-- Subtle Drop Shadow -->
+    <filter id="dropShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#4F46E5" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- LOGO ICON GROUP -->
+  <g transform="translate(10, 5)" filter="url(#dropShadow)">
+    <!-- Base Hexagon/Container -->
+    <rect x="0" y="0" width="100" height="100" rx="24" fill="url(#iconGradient)" />
+    
+    <!-- Logical Puzzle Nodes & Connections (Background pattern inside icon) -->
+    <path d="M 30 30 L 70 30 L 70 70 L 30 70 Z" stroke="#ffffff" stroke-opacity="0.15" stroke-width="2" fill="none" stroke-dasharray="4,4"/>
+
+    <!-- Left Angle Bracket `<` (Logic/Code) -->
+    <path d="M 38 40 L 26 50 L 38 60" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+
+    <!-- Central Brain Node / Connection Network (Problem Solving) -->
+    <!-- Top-Right Node -->
+    <circle cx="68" cy="36" r="4.5" fill="#06B6D4" />
+    <!-- Center Hub Node -->
+    <circle cx="50" cy="50" r="6" fill="#FFFFFF" />
+    <!-- Bottom-Right Node -->
+    <circle cx="68" cy="64" r="4.5" fill="#06B6D4" />
+
+    <!-- Logic Connector Lines -->
+    <path d="M 40 50 L 44 50" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+    <path d="M 54 46 L 64 39" stroke="url(#accentGradient)" stroke-width="3" stroke-linecap="round"/>
+    <path d="M 54 54 L 64 61" stroke="url(#accentGradient)" stroke-width="3" stroke-linecap="round"/>
+    
+    <!-- Code Forward Slash `/` or Right Bracket element subtle accent -->
+    <path d="M 74 44 L 74 56" stroke="#06B6D4" stroke-width="3" stroke-linecap="round" />
+  </g>
+
+  <!-- BRAND TITLE: "ProblemHub" -->
+  <g transform="translate(130, 68)">
+    <!-- "Problem" text -->
+    <text x="0" y="0" 
+          font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" 
+          font-size="46" 
+          font-weight="800" 
+          fill="#0F172A" 
+          letter-spacing="-0.5">Problem</text>
+    
+    <!-- "Hub" Badge Box & Text -->
+    <g transform="translate(182, -40)">
+      <rect x="0" y="0" width="104" height="48" rx="12" fill="url(#iconGradient)" />
+      <text x="52" y="33" 
+            font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" 
+            font-size="30" 
+            font-weight="700" 
+            fill="#FFFFFF" 
+            text-anchor="middle"
+            letter-spacing="0.5">Hub</text>
+    </g>
+  </g>
+</svg>

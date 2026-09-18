@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="420" viewBox="0 0 1400 420">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1687FF"/>
+      <stop offset="100%" stop-color="#7510F7"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Icon -->
+  <g transform="translate(70,55)">
+    <rect x="0" y="0" width="300" height="300" rx="70" fill="url(#g)"/>
+
+    <!-- Automation / AI circuit symbol -->
+    <path d="M88 108h78c18 0 32 14 32 32v20" fill="none" stroke="white" stroke-width="18" stroke-linecap="round"/>
+    <circle cx="88" cy="108" r="18" fill="white"/>
+    <circle cx="198" cy="180" r="18" fill="white"/>
+
+    <path d="M212 88v-25M212 237v-25M88 237v-25M63 162H38M250 162h25"
+          stroke="white" stroke-width="14" stroke-linecap="round"/>
+
+    <!-- AI spark -->
+    <path d="M150 92l14 38 38 14-38 14-14 38-14-38-38-14 38-14z"
+          fill="white"/>
+
+    <!-- workflow arrows -->
+    <path d="M75 218c38 42 112 50 157 5" fill="none" stroke="white"
+          stroke-width="14" stroke-linecap="round"/>
+    <path d="M218 205l19 18-25 9" fill="none" stroke="white"
+          stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="425" y="220" font-family="Inter, Arial, sans-serif"
+        font-size="112" font-weight="800" letter-spacing="-4">
+    <tspan fill="#14213D">Task</tspan><tspan fill="#7510F7">Flow</tspan>
+    <tspan fill="#1687FF"> AI</tspan>
+  </text>
+
+  <!-- subtle descriptor -->
+  <text x="432" y="278" font-family="Inter, Arial, sans-serif"
+        font-size="25" font-weight="500" fill="#52617A"
+        letter-spacing="1">
+    AI-POWERED PRODUCTIVITY AUTOMATION
+  </text>
+</svg>

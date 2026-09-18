@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="420" viewBox="0 0 1400 420">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1687FF"/>
+      <stop offset="100%" stop-color="#7510F7"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Logo icon: data structures + algorithm flow -->
+  <g transform="translate(70,55)">
+    <rect width="300" height="300" rx="70" fill="url(#g)"/>
+
+    <!-- Connected data nodes -->
+    <line x1="150" y1="92" x2="82" y2="158" stroke="white" stroke-width="12" stroke-linecap="round"/>
+    <line x1="150" y1="92" x2="218" y2="158" stroke="white" stroke-width="12" stroke-linecap="round"/>
+    <line x1="82" y1="158" x2="150" y2="225" stroke="white" stroke-width="12" stroke-linecap="round"/>
+    <line x1="218" y1="158" x2="150" y2="225" stroke="white" stroke-width="12" stroke-linecap="round"/>
+
+    <circle cx="150" cy="92" r="28" fill="white"/>
+    <circle cx="82" cy="158" r="28" fill="white"/>
+    <circle cx="218" cy="158" r="28" fill="white"/>
+    <circle cx="150" cy="225" r="28" fill="white"/>
+
+    <!-- Algorithm arrow -->
+    <path d="M72 263 C118 292, 190 292, 238 260"
+          fill="none" stroke="white" stroke-width="11"
+          stroke-linecap="round"/>
+    <path d="M220 245 L242 260 L219 273"
+          fill="none" stroke="white" stroke-width="11"
+          stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Title only -->
+  <text x="425" y="235"
+        font-family="Inter, Arial, sans-serif"
+        font-size="116" font-weight="800"
+        letter-spacing="-5">
+    <tspan fill="#14213D">Algo</tspan><tspan fill="#7510F7">Viz</tspan>
+  </text>
+</svg>
