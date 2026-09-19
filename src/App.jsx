@@ -1,10 +1,12 @@
 import { useState } from "react";
+import { AnimatePresence } from "framer-motion";
+import WelcomeScreen from "./components/Welcome/WelcomeScreen";
 import NavBar from "./components/NavBar/NavBar";
 import HeroSection from "./components/HeroSection/HeroSection";
 import Intro from "./components/Skills/Intro";
 import WorkContainer from "./components/Projects/WorkContainer";
 import FutureProjectsContainer from "./components/FutureProjects/FutureProjectsContainer";
-import ContactUs from "./components/ContactUs/ContactUs";
+
 import Footer from "./components/Footer/Footer";
 import SayHello from "./components/Conversation/SayHello";
 import StartupCon from "./components/Conversation/StartupCon";
@@ -12,6 +14,22 @@ import ContactPage from "./components/Conversation/Contact";
 
 function App() {
   const [view, setView] = useState("main"); // "main" | "hello" | "startup" | "contact"
+  const [showWelcome, setShowWelcome] = useState(() => {
+    try {
+      return !sessionStorage.getItem("welcomeShown");
+    } catch {
+      return true; // storage blocked (e.g. private mode) — fall back to always showing
+    }
+  });
+
+  const dismissWelcome = () => {
+    try {
+      sessionStorage.setItem("welcomeShown", "true");
+    } catch {
+      // ignore — worst case it shows again next reload
+    }
+    setShowWelcome(false);
+  };
 
   if (view === "hello") {
     return <SayHello onClose={() => setView("main")} />;
@@ -27,10 +45,19 @@ function App() {
 
   return (
     <>
-      <NavBar onSayHello={() => setView("hello")} />
+      <AnimatePresence>
+        {showWelcome && <WelcomeScreen onFinish={dismissWelcome} />}
+      </AnimatePresence>
+     <NavBar
+       onSayHello={() => setView("hello")}
+       onMyProjects={() =>
+         document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })
+       }
+    />
       <HeroSection />
       <Intro />
-      <WorkContainer />
+     <div id="projects">
+       <WorkContainer />     </div>
       <FutureProjectsContainer onStartupCon={() => setView("startup")} />
       {/* <ContactUs onContact={() => setView("contact")} /> */}
       <Footer onContact={() => setView("contact")} />
@@ -39,4 +66,3 @@ function App() {
 }
 
 export default App;
-

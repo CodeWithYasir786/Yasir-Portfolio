@@ -1,7 +1,7 @@
 import { useState } from "react";
 import logo from "./logonY.png";
 
-function NavBar({ onSayHello }) {
+function NavBar({ onSayHello, onMyProjects }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -14,14 +14,17 @@ function NavBar({ onSayHello }) {
               <img
                 src={logo}
                 alt="Logo image"
-                className="object-contain transition-transform duration-300 hover:scale-130"
+                className="object-contain transition-transform duration-300 hover:scale-1 30"
               />
             </div>
           </a>
 
           {/* Desktop Nav */}
           <div className="hidden sm:flex items-center gap-6">
-            <span className="text-[#364168] hover:text-purple-400 cursor-pointer font-semibold text-base tracking-tightS sm:block hidden">
+            <span
+              onClick={onMyProjects}
+              className="text-[#364168] hover:text-purple-400 cursor-pointer font-semibold text-base tracking-tightS sm:block hidden"
+            >
               My Projects
             </span>
             <button
@@ -56,7 +59,13 @@ function NavBar({ onSayHello }) {
         className={`sm:hidden overflow-hidden transition-all duration-300 ${menuOpen ? "max-h-40 py-4" : "max-h-0"}`}
       >
         <div className="flex flex-col items-center gap-4 px-4 pb-2">
-          <span className="text-purple-700 cursor-pointer font-bold text-base">
+          <span
+            onClick={() => {
+              onMyProjects?.();
+              setMenuOpen(false);
+            }}
+            className="text-[#364168] hover:text-purple-400 cursor-pointer font-semibold text-base tracking-tightS "
+          >
             My Projects
           </span>
           <button

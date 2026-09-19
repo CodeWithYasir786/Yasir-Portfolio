@@ -35,16 +35,13 @@ function Footer({ onContact }) {
       </div>
 
       <div className="bg-[#6e07f3] text-[#dfc8fc] text-center flex justify-center items-center flex-col mt-16 sm:mt-8 md:mt-0 pt-24 pb-16 px-4">
-        {/* Profile Image */}
-        {/* 
         <img
-          src={Yasir}
-          alt="Yasir Mustafa"
-          className="pl-0 w-30 h-35 rounded-full"
+          src={img}
+          alt="Yasir Mustafa logo"
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        className="pl-0 w-10 cursor-pointer hover:scale-120"
         />
-        */}
-
-        <img src={img} alt="Yasir Mustafa logo" className="pl-0 w-10" />
+        {/* <img src={img} alt="Yasir Mustafa logo" className="pl-0 w-10" /> */}
 
         <h2 className="my-4">
           Living, learning, & leveling <br /> up one day at a time.
